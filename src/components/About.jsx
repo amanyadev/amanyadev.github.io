@@ -42,7 +42,12 @@ const About = () => {
     <motion.p variants={fadeIn("","",0.1,1)}
     className='mt-4 text-secondary text-[17px]
     max-w-3xl leading-[30px]'>
-      I am a skilled Unity Developer with etc etc
+     
+    Currently actively contributing to the development of the Twinn Create app. 
+    With a strong background in game development,
+    I've successfully delivered a variety of engaging applications,
+    showcasing expertise in both 2D and 3D realms. 
+    My diverse experiences reflect a deep-seated interest in the dynamic field of game development.
     </motion.p>
 
     <div className = 'mt-20 flex flex-wrap gap-10'>

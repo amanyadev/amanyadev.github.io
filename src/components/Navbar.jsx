@@ -20,7 +20,7 @@ const Navbar = () => {
         }>
         <img src = {logo} alt= 'logo' className=' w-9 h-9 object-contain'></img>
         <p className='text-white text-[18px] font-bold cursor-pointer flex'> 
-        Aman &nbsp;  <span className='sm:block hidden'>| Game Dev</span> </p>
+        Aman &nbsp;  <span className='sm:block hidden'>| Game Developer</span> </p>
         
       </Link>
 

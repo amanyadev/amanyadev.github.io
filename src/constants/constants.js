@@ -137,7 +137,7 @@ const experiences = [
     ],
   },
   {
-    title: "Software Developer Engineer - Intern",
+    title: "Software Developer Engineer",
     company_name: "Holoworld | Holosuit PTE",
     icon: holosuit,
     iconBg: "#FFFFFF",

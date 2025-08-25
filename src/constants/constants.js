@@ -15,6 +15,7 @@ import
   nodejs,
   git,
   figma,
+  baazi,
   tooliqa,
   byjus,
   holosuit,
@@ -31,6 +32,10 @@ export const navLinks = [
   {
     id: "work",
     title: "Work",
+  },
+  {
+    id: "github",
+    title: "GitHub",
   },
   {
     id: "contact",
@@ -110,11 +115,23 @@ const technologies = [
 
 const experiences = [
   {
+    title: "Software Engineer II",
+    company_name: "Baazi Games (Pokerbaazi)",
+    icon: baazi,
+    iconBg: "#FFFFFF",
+    date: "Mar 2024 - Present",
+    points: [
+      "currently working on Pokerbaazi Global Mobile app (React + Unity)",
+      "built and deployed Pokerbaazi Upgrade 2025 for desktop(Electron + Unity)",
+      "worked on the native side of the app, C++ and swift"
+    ],
+  },
+  {
     title: "Software Engineer",
     company_name: "Tooliqa Innovations LLP",
     icon: tooliqa,
     iconBg: "#FFFFFF",
-    date: "Dec 2022 - Present",
+    date: "Dec 2022 - Feb 2024",
     points: [
       "currently working on Twinn Create app, an end to end solution for Architects, from Floor Plan Creation to photorealistic rendering stage to presentation and visualization in real-time 3D",
       "implementing half-edge data structure from scratch, which drives the core of the app, solved many complex problems along with various optimizations, fixes and improvements",
@@ -220,7 +237,7 @@ const projects = [
   {
     name: "XPLORE Journey Byjus",
     description:
-      "Xplore - part of BYJU’S App, was introduced to make the learning concepts fun, engaging and personalised for everyone",
+      "Xplore - part of BYJU'S App, was introduced to make the learning concepts fun, engaging and personalised for everyone",
     tags: [
       {
         name: "unity",
@@ -261,4 +278,80 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const githubProjects = [
+  {
+    name: "Creature Miniature",
+    description: "A Unity starter project for 3D platforming games with comprehensive game mechanics and optimized performance.",
+    tags: [
+      { name: "unity", color: "blue-text-gradient" },
+      { name: "csharp", color: "green-text-gradient" },
+      { name: "gamedev", color: "pink-text-gradient" }
+    ],
+    github_link: "https://github.com/amanyadev/Creature-Miniature",
+    stars: 2,
+    forks: 7
+  },
+  {
+    name: "HalfEdge Data Structure",
+    description: "Implementation of Half-Edge data structure in Unity for advanced mesh manipulation and geometric calculations.",
+    tags: [
+      { name: "unity", color: "blue-text-gradient" },
+      { name: "csharp", color: "green-text-gradient" },
+      { name: "algorithms", color: "pink-text-gradient" }
+    ],
+    github_link: "https://github.com/amanyadev/HalfEdge",
+    stars: 1,
+    forks: 0
+  },
+  {
+    name: "IOC Unity Framework",
+    description: "C# implementation of Inversion of Control and Dependency Injection pattern for Unity and pure C# projects.",
+    tags: [
+      { name: "csharp", color: "blue-text-gradient" },
+      { name: "unity", color: "green-text-gradient" },
+      { name: "patterns", color: "pink-text-gradient" }
+    ],
+    github_link: "https://github.com/amanyadev/IOC-Unity",
+    stars: 0,
+    forks: 0
+  },
+  {
+    name: "Cocos 3D Game",
+    description: "Interactive 3D game built with Cocos Creator, showcasing 3D mechanics and web deployment capabilities.",
+    tags: [
+      { name: "cocos", color: "blue-text-gradient" },
+      { name: "javascript", color: "green-text-gradient" },
+      { name: "webgl", color: "pink-text-gradient" }
+    ],
+    github_link: "https://github.com/amanyadev/cocos_3d_game",
+    live_link: "https://3dgameinvact.netlify.app/",
+    stars: 0,
+    forks: 0
+  },
+  {
+    name: "Pokemon Portals",
+    description: "Three.js project featuring interactive 3D Pokemon world with portals and immersive gameplay elements.",
+    tags: [
+      { name: "threejs", color: "blue-text-gradient" },
+      { name: "javascript", color: "green-text-gradient" },
+      { name: "webgl", color: "pink-text-gradient" }
+    ],
+    github_link: "https://github.com/amanyadev/PokemonPortals",
+    stars: 1,
+    forks: 0
+  },
+  {
+    name: "Vulkan Graphics",
+    description: "Computer graphics project using Vulkan API for low-level graphics programming and advanced rendering techniques.",
+    tags: [
+      { name: "cpp", color: "blue-text-gradient" },
+      { name: "vulkan", color: "green-text-gradient" },
+      { name: "graphics", color: "pink-text-gradient" }
+    ],
+    github_link: "https://github.com/amanyadev/cg_vulkan",
+    stars: 0,
+    forks: 0
+  }
+];
+
+export { services, technologies, experiences, testimonials, projects, githubProjects };

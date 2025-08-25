@@ -8,21 +8,19 @@ import { SectionWrapper } from '../hoc';
 
 const ServiceCard = ({index,title,icon})=>{
   return(
-      <Tilt className='xs:w-[250px] w-full'>
+      <Tilt className='xs:w-[250px] w-full' options={{
+        max:45,
+        scale:1,
+        speed:450
+      }}>
           <motion.div variants= {fadeIn('right','spring', 0.5*index,1,0.75)}
           className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
           >
-          <div options = {
-            {
-              max:45,
-              scale:1,
-              speed:450
-          }}
-          className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+          <div className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
           >
             <img src={icon} alt={title}
             className='w-16 h-16 object-contain'/>
-            <h3 className='text-white text-[20]px font-bold text-center'>{title}</h3>
+            <h3 className='text-white text-[20px] font-bold text-center'>{title}</h3>
 
 
           </div>
@@ -40,9 +38,10 @@ const About = () => {
     </motion.div>
 
     <motion.p variants={fadeIn("","",0.1,1)}
-    className='mt-4 text-secondary text-[17px]
-    max-w-3xl leading-[30px]'>
-      I am a skilled Unity Developer with etc etc
+    className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
+      I am a skilled software developer with experience in Unity game development, web technologies, and modern frameworks. With a passion for creating immersive digital experiences, I specialize in building interactive applications that combine creativity with technical excellence. 
+      
+      My expertise spans across game development using Unity and C#, front-end development with React and JavaScript, and various other technologies. I enjoy tackling complex problems and turning innovative ideas into reality through clean, efficient code. Whether it's developing engaging games, responsive web applications, or interactive experiences, I'm always eager to learn new technologies and push the boundaries of what's possible.
     </motion.p>
 
     <div className = 'mt-20 flex flex-wrap gap-10'>

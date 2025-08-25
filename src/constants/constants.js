@@ -15,6 +15,7 @@ import
   nodejs,
   git,
   figma,
+  baazi,
   tooliqa,
   byjus,
   holosuit,
@@ -110,11 +111,23 @@ const technologies = [
 
 const experiences = [
   {
+    title: "Software Engineer II",
+    company_name: "Baazi Games (Pokerbaazi)",
+    icon: baazi,
+    iconBg: "#FFFFFF",
+    date: "Mar 2024 - Present",
+    points: [
+      "currently working on Pokerbaazi Global Mobile app (React + Unity)",
+      "built and deployed Pokerbaazi Upgrade 2025 for desktop(Electron + Unity)",
+      "worked on the native side of the app, C++ and swift"
+    ],
+  },
+  {
     title: "Software Engineer",
     company_name: "Tooliqa Innovations LLP",
     icon: tooliqa,
     iconBg: "#FFFFFF",
-    date: "Dec 2022 - Present",
+    date: "Dec 2022 - Feb 2024",
     points: [
       "currently working on Twinn Create app, an end to end solution for Architects, from Floor Plan Creation to photorealistic rendering stage to presentation and visualization in real-time 3D",
       "implementing half-edge data structure from scratch, which drives the core of the app, solved many complex problems along with various optimizations, fixes and improvements",

@@ -21,6 +21,7 @@ import csharp from"./tech/csharp.png";
 import python from "./tech/python.png";
 import reactjs from "./tech/reactjs.png";
 
+import baazi from "./company/baazi.png";
 import byjus from "./company/byjus.svg";
 import tooliqa from "./company/tooliqa.png";
 import holosuit from "./company/holosuit.png";
@@ -55,7 +56,7 @@ export {
   create,
   xplore,
   holoprojector,
-
+  baazi,
   byjus,
   tooliqa,
   holosuit

@@ -6,6 +6,7 @@ import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { githubProjects } from "../constants/constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import { useTheme } from "../contexts/ThemeContext";
 
 const GitHubProjectCard = ({
   index,
@@ -17,6 +18,8 @@ const GitHubProjectCard = ({
   stars,
   forks
 }) => {
+  const { isDarkMode } = useTheme();
+  
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
@@ -25,9 +28,9 @@ const GitHubProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+        className={`${isDarkMode ? 'bg-tertiary' : 'bg-light-tertiary border border-gray-200'} p-5 rounded-2xl sm:w-[360px] w-full`}
       >
-        <div className='relative w-full h-[230px] bg-black-100 rounded-2xl flex items-center justify-center'>
+        <div className={`relative w-full h-[230px] ${isDarkMode ? 'bg-black-100' : 'bg-light-100'} rounded-2xl flex items-center justify-center`}>
           {/* GitHub Project Visual */}
           <div className='w-full h-full flex flex-col items-center justify-center p-6'>
             <div className='w-16 h-16 rounded-full bg-gradient-to-r from-[#804dee] to-[#bf61ff] flex items-center justify-center mb-4'>
@@ -37,8 +40,8 @@ const GitHubProjectCard = ({
                 className='w-8 h-8 object-contain invert'
               />
             </div>
-            <h3 className='text-white font-bold text-[18px] text-center mb-2'>{name}</h3>
-            <div className='flex items-center gap-4 text-secondary text-[12px]'>
+            <h3 className={`${isDarkMode ? 'text-white' : 'text-gray-800'} font-bold text-[18px] text-center mb-2`}>{name}</h3>
+            <div className={`flex items-center gap-4 ${isDarkMode ? 'text-secondary' : 'text-light-secondary'} text-[12px]`}>
               <div className='flex items-center gap-1'>
                 <span>⭐</span>
                 <span>{stars}</span>
@@ -55,7 +58,7 @@ const GitHubProjectCard = ({
               {live_link && (
                 <div
                   onClick={() => window.open(live_link, "_blank")}
-                  className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+                  className={`${isDarkMode ? 'black-gradient' : 'bg-white shadow-lg'} w-10 h-10 rounded-full flex justify-center items-center cursor-pointer`}
                   title="Live Demo"
                 >
                   <span className='text-white text-[12px]'>🌐</span>
@@ -63,13 +66,13 @@ const GitHubProjectCard = ({
               )}
               <div
                 onClick={() => window.open(github_link, "_blank")}
-                className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+                className={`${isDarkMode ? 'black-gradient' : 'bg-white shadow-lg'} w-10 h-10 rounded-full flex justify-center items-center cursor-pointer`}
                 title="View Source"
               >
                 <img
                   src={github}
                   alt='source code'
-                  className='w-1/2 h-1/2 object-contain'
+                  className={`w-1/2 h-1/2 object-contain ${!isDarkMode ? 'filter brightness-0' : ''}`}
                 />
               </div>
             </div>
@@ -77,7 +80,7 @@ const GitHubProjectCard = ({
         </div>
 
         <div className='mt-5'>
-          <p className='mt-2 text-secondary text-[14px] leading-[20px]'>{description}</p>
+          <p className={`mt-2 ${isDarkMode ? 'text-secondary' : 'text-light-secondary'} text-[14px] leading-[20px]`}>{description}</p>
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
@@ -96,17 +99,19 @@ const GitHubProjectCard = ({
 };
 
 const GitHubProjects = () => {
+  const { isDarkMode } = useTheme();
+  
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText}`}>Open Source Contributions</p>
-        <h2 className={`${styles.sectionHeadText}`}>GitHub Projects.</h2>
+        <p className={`${styles.sectionSubText} ${isDarkMode ? 'text-secondary' : 'text-light-secondary'}`}>Open Source Contributions</p>
+        <h2 className={`${styles.sectionHeadText} ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>GitHub Projects.</h2>
       </motion.div>
 
       <div className='w-full flex'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
+          className={`mt-3 ${isDarkMode ? 'text-secondary' : 'text-light-secondary'} text-[17px] max-w-3xl leading-[30px]`}
         >
           Here are some of my open-source projects that demonstrate my technical skills 
           in game development, graphics programming, and software architecture. Each 

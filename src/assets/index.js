@@ -29,6 +29,7 @@ import holosuit from "./company/holosuit.png";
 import create from "./create.png";
 import xplore from "./xplore.png";
 import holoprojector from "./holoprojector.png";
+import k4fitness from "./k4fitness.png"
 
 export {
   logo,
@@ -56,6 +57,7 @@ export {
   create,
   xplore,
   holoprojector,
+  k4fitness,
   baazi,
   byjus,
   tooliqa,

@@ -20,6 +20,7 @@ import
   byjus,
   holosuit,
   holoprojector,
+  k4fitness,
   create,
   xplore
 } from "../assets";
@@ -215,6 +216,26 @@ const testimonials = [
 
 const projects = [
   {
+    name: "K4 Fitness Zone",
+    description: "A modern, responsive website for K4 Fitness Zone featuring interactive contact forms, real-time location mapping, and social media integration",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: k4fitness,
+    source_code_link: "https://www.k4fitnesszone.com",
+  },
+  {
     name: "Twinn Create",
     description: "The end to end solution for Architects, from Floor Plan Creation to photorealistic rendering stage in real-time 3D",
     tags: [
@@ -279,6 +300,19 @@ const projects = [
 ];
 
 const githubProjects = [
+  {
+    name: "Fitness Zone React Web",
+    description: "Modern, responsive fitness zone website with interactive contact forms, real-time location mapping, and social media integration.",
+    tags: [
+      { name: "react", color: "blue-text-gradient" },
+      { name: "typescript", color: "green-text-gradient" },
+      { name: "tailwindcss", color: "pink-text-gradient" }
+    ],
+    github_link: "https://github.com/amanyadev/fitness-zone-react-web",
+    live_link: "https://www.k4fitnesszone.com",
+    stars: 0,
+    forks: 0
+  },
   {
     name: "Creature Miniature",
     description: "A Unity starter project for 3D platforming games with comprehensive game mechanics and optimized performance.",
